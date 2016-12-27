@@ -169,7 +169,9 @@ def get_data_from_quandl(symbol,features,start_dt=dt.datetime(2000,1,1),end_dt=d
 
 
 if __name__=='__main__':
-    app_quantfy.run(host='0.0.0.0',debug=True)
+    import os
+    port=int(os.environ.get("PORT",5000)) # This is for heroku app to run I guess
+    app_quantfy.run(host='0.0.0.0',debug=True,port=port)
     # df=get_data_from_quandl(symbol='SPY',features=['Close','Adj. Close','Open','Adj. Open'])
     #print (df.head())
     #print (df.tail())

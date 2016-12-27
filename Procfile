@@ -1,1 +1,1 @@
-web: python hello_quantfy.py $PORT
+web: python hello_quantfy.py 
