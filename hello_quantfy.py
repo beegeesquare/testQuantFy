@@ -31,7 +31,7 @@ def index():
         
         # Define the variables. This is a local variable, but in Flask it will be passed to the plot route I guess
         app_quantfy.vars={} # This is a dictionary
-        app_quantfy.vars['sym'] = request.form['sym'] # 'sym' should be defined in html file as name
+        app_quantfy.vars['sym'] = request.form['sym'].upper() # 'sym' should be defined in html file as name
                
         if 'closeprice' in request.form: 
             app_quantfy.vars['Close']=request.form['closeprice'] # Keys here should be in the same form that we get from database (like quandl)
