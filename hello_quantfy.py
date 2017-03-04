@@ -145,7 +145,7 @@ def get_data_from_quandl(symbol,features,start_dt=dt.datetime(2000,1,1),end_dt=d
                                  end_date=end_dt.strftime('%Y-%m-%d')) # This will be a pandas dataframe
             
             features=list(features); # Creates a new copy
-        
+            
             # Return the dataframe only with the entries requested
             # Quandl data frame already indexes to date (no need for any other change)
             df=pd.DataFrame(index=dataframe.index) # Create an empty dataframe with indices being dates
